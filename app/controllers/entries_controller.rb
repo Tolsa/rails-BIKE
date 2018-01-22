@@ -7,4 +7,6 @@ class EntriesController < ApplicationController
     @entry = Entry.new
   end
 
+
+
 end
