@@ -1,47 +1,6 @@
 class PagesController < ApplicationController
 
   def home
-
-    @renderedText = 'scrape reddit data here'
-    Entry.destroy_all
-    require 'open-uri'
-    urldelta = 1
-    # urlbasis = "https://www.leboncoin.fr/velos/offres/ile_de_france/paris/?o=#{urldelta}&q=v%E9lo%20course&pe=12&location=Paris"
-    # @doc = Nokogiri::HTML(open(urlbasis))
-
-    while urldelta <= 6 do
-      urlbasis = "https://www.leboncoin.fr/velos/offres/ile_de_france/paris/?o=#{urldelta}&q=v%E9lo%20course&pe=12&location=Paris"
-      @doc = Nokogiri::HTML(open(urlbasis))
-      @entries = @doc.css('.list_item').first(8)
-      @entriestitle = []
-      @entrieslink = []
-      @entries.each do |entry|
-        title = entry['title']
-        link = entry['href']
-        @doc2 = Nokogiri::HTML(open("https:#{link}"))
-        @description = @doc2.css('.properties_description .value').inner_text
-        @test = "55"
-
-        if @description.include? @test
-          Entry.create(title: title, link: link)
-        end
-      end
-
-      urldelta += 1
-    end
-    # @entries = @doc.css('.list_item').first(8)
-    # @entriestitle = []
-    # @entrieslink = []
-    # @entries.each do |entry|
-    #   title = entry['title']
-    #   link = entry['href']
-    #   @doc2 = Nokogiri::HTML(open("https:#{link}"))
-    #   @description = @doc2.css('.properties_description .value').inner_text
-    #   @test = "52"
-
-    #   if @description.include? @test
-    #     Entry.create(title: title, link: link)
-    #   end
-    # end
   end
+
 end

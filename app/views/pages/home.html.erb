@@ -1,14 +1,12 @@
-<div class="container-search">
-<% Entry.all.each do |entry| %>
-  <div class="card-bike">
-    <div class="bike-title">
-      <%= entry.title %>
-    </div>
-    <div class="bike-link">
-      <%= entry.link %>
-    </div>
-  </div>
-<% end %>
-
+<div class="search-form">
+  <%= form_tag entries_path, method: :get do %>
+    <%= text_field_tag :size,
+      params[:size],
+      class: "form-control",
+      placeholder: "Rentrez ici la taille du vélo"
+      %>
+    <%=   %>
+  <% end %>
 </div>
+
 
