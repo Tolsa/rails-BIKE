@@ -2,7 +2,8 @@
   "name": "rails-BIKE",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.2.1"
+    "@rails/webpacker": "^3.2.1",
+    "@vimeo/player": "^2.2.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.11.1"
