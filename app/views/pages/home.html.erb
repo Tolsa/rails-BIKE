@@ -1,12 +1,29 @@
-<div class="search-form">
-  <%= form_tag entries_path, method: :get do %>
-    <%= text_field_tag :size,
-      params[:size],
-      class: "form-control",
-      placeholder: "Rentrez ici la taille du vélo"
-      %>
-    <%=   %>
-  <% end %>
-</div>
+<div class="wrapper">
+  <div class="header-container">
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/67849157?loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="overlay">
 
+      </div>
+      <div class="div-cache-btn">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="search-form">
+    <%= form_tag entries_path, id: "search-bike-form", method: :get do %>
+      <%= text_field_tag :size,
+        params[:size],
+        class: "form-control",
+        placeholder: "Rentrez ici la taille du vélo"
+        %>
+      <%= submit_tag("Rechercher", :class => "submit-btn", :id => "submit")
+       %>
+    <% end %>
+  </div>
+
+  <div id="result"></div>
+
+</div>
 
