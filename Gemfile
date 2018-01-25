@@ -7,6 +7,7 @@ end
 
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'font-awesome-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
