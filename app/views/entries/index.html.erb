@@ -1,0 +1,13 @@
+<div class="container-search">
+<% Entry.all.each do |entry| %>
+  <div class="card-bike">
+    <div class="bike-title">
+      <%= entry.title %>
+    </div>
+    <div class="bike-link">
+      <%= entry.link %>
+    </div>
+  </div>
+<% end %>
+
+</div>
