@@ -17,11 +17,12 @@ class EntriesController < ApplicationController
         link = entry['href']
         @doc2 = Nokogiri::HTML(open("https:#{link}"))
         @description = @doc2.css('.properties_description .value').inner_text
+        itemimage = @doc2.css('#item-image')
+        picture = itemimage.css('img').src
         @test = params[:query]
-        @exception = "1m55"
 
         if @description.include? @test
-        Entry.create(title: title, link: link)
+        Entry.create(title: title, link: link, picture: picture)
         end
       end
 
