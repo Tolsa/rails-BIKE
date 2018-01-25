@@ -142,4 +142,8 @@ body {
   position: relative;
   z-index: 400;
   margin-top: 46px;
+  @media (max-width: 900px) {
+    margin-top: 0px;
+    top: -193px;
+  }
 }

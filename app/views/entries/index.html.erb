@@ -2,7 +2,7 @@
 <% Entry.all.each do |entry| %>
   <div class="card-bike">
     <div class="bike-image">
-
+      <%= image_tag(entry.picture,  alt: "picbike", class: "bike-img") %>
     </div>
     <div class="bike-title">
       <%= entry.title %>
