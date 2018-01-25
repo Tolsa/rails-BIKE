@@ -1,3 +1,21 @@
 // Place all the styles related to the entrys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container-search {
+ background-color: ghostwhite;
+ padding: 30px;
+
+}
+
+.card-bike {
+  background-color: rgba(192, 224, 230, 1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  // align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
