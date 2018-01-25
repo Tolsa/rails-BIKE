@@ -3,9 +3,11 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.1",
-    "@vimeo/player": "^2.2.1"
+    "@vimeo/player": "^2.2.1",
+    "webpacker": "0.0.3"
   },
   "devDependencies": {
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }
 }
