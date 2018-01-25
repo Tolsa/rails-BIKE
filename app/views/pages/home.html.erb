@@ -15,14 +15,15 @@
   </div>
 
   <div class="search-form">
-    <%= form_tag entries_path, id: "search-bike-form", method: :get do %>
+    <%= form_tag entries_path, id: "search-bike-form", autocomplete: "off",method: :get do %>
       <%= text_field_tag :size,
         params[:size],
         class: "form-control",
         placeholder: "Rentrez ici la taille du vélo"
         %>
-      <%= submit_tag("Rechercher", :class => "submit-btn", :id => "submit")
-       %>
+      <%= button_tag(type: "submit", class: "submit-btn", id: "submit") do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      <% end %>
     <% end %>
   </div>
 
@@ -68,7 +69,7 @@
   }
 
   function loopStart() {
-    player.seekTo(70);   // Start at 7 seconds
+    player.seekTo(70);   // Start at 70 seconds
   }
   function onPlayerStateChange(event) {
       if (event.data == YT.PlayerState.PLAYING) {
