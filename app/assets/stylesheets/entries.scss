@@ -47,6 +47,31 @@
   box-shadow: -5px 1px 9px rgba(0,0,0,0.3), -7px -1px 2px rgba(0,0,0,0.2);
 }
 
+.bike-price {
+  position: relative;
+  display: flex;
+  left: 15px;
+  bottom: 88px;
+  border-radius: 11px;
+  background-color: white;
+  max-width: 178px;
+  /* height: 72px; */
+  font-size: 58px;
+  border: 3px solid black;
+  /* text-align: center; */
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0px;
+  }
+  p:last-child {
+    font-weight: light;
+    margin-left: 10px;
+    font-size: 26px;
+  }
+}
+
 .bike-btn{
   /* background-color: darkcyan; */
   width: 149px;
@@ -83,6 +108,14 @@
 
 .bike-desc {
   min-height: 150px;
+  p {
+    color: dimgray;
+    line-height: 21px;
+    letter-spacing: 1px;
+    max-height: 191px;
+    overflow: scroll;
+    /* overflow-anchor: visible; */
+  }
 }
 
 a {

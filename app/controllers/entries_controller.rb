@@ -9,16 +9,18 @@ class EntriesController < ApplicationController
       @doc = Nokogiri::HTML(open(urlbasis))
       @entries = @doc.css('.list_item')
       @entries.each do |entry|
+        pricediv = entry.css('.item_price').attr("content").value
         title = entry['title']
         link = "https:" + entry['href']
         # @picture = @itemimage.attr("data-imgsrc")
         # puts " ---------- #{@itemimage}"
         @doc2 = Nokogiri::HTML(open("#{link}"))
         @description = @doc2.css('.properties_description .value').inner_text
+        puts "----------- #{@description}"
         @test = params[:query]
 
         if @description.include? @test
-          Entry.create(title: title, link: link)
+          Entry.create(title: title, link: link, price: pricediv.to_i, description: @description)
         end
       end
     end
