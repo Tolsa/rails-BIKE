@@ -8,11 +8,20 @@
       <% if entry.picture != nil %>
         <%= image_tag(entry.picture,  alt: "picbike", class: "bike-img") %>
       <% end %>
+      <div class="bike-price">
+        <p>
+          <%= entry.price.to_s %>
+        </p>
+        <p>
+           €
+        </p>
+      </div>
     </div>
     <div class="bike-content">
       <div class="bike-desc">
-        <h3>Description :</h3>
-        <p>Some text</p>
+        <p>
+          <%= entry.description %>
+        </p>
       </div>
       <%= link_to entry.link do %>
         <div class="bike-btn">
